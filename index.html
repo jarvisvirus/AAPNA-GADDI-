@@ -1,1 +1,141 @@
-hello
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Mountain Rush - Impossible Hills</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="game-wrapper">
+
+        <div class="top-bar">
+
+            <div class="game-title">
+                🏔️ MOUNTAIN RUSH
+            </div>
+
+            <div class="stats">
+
+                <div>
+                    📏 Distance:
+                    <span id="distance">0</span> m
+                </div>
+
+                <div>
+                    🪙 Coins:
+                    <span id="coins">0</span>
+                </div>
+
+                <div>
+                    ⛽ Fuel:
+                    <span id="fuel">100</span>%
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="game-container">
+
+            <canvas id="gameCanvas"></canvas>
+
+            <div id="startScreen" class="screen">
+
+                <h1>🏔️ MOUNTAIN RUSH</h1>
+
+                <p class="subtitle">
+                    IMPOSSIBLE HILLS
+                </p>
+
+                <div class="instructions">
+
+                    <p>🚗 <b>RIGHT / D</b> → Accelerate</p>
+
+                    <p>🚗 <b>LEFT / A</b> → Brake / Reverse</p>
+
+                    <p>🔄 <b>UP / W</b> → Rotate backward</p>
+
+                    <p>🔄 <b>DOWN / S</b> → Rotate forward</p>
+
+                    <p>⛽ Collect fuel to survive</p>
+
+                    <p>🪙 Collect coins to increase your score</p>
+
+                </div>
+
+                <button id="startButton">
+                    START GAME
+                </button>
+
+            </div>
+
+
+            <div id="gameOverScreen" class="screen hidden">
+
+                <h1>💥 CRASH!</h1>
+
+                <p>You crashed your car!</p>
+
+                <div class="final-score">
+
+                    <p>
+                        📏 Distance:
+                        <strong>
+                            <span id="finalDistance">0</span> m
+                        </strong>
+                    </p>
+
+                    <p>
+                        🪙 Coins:
+                        <strong>
+                            <span id="finalCoins">0</span>
+                        </strong>
+                    </p>
+
+                    <p>
+                        🏆 Score:
+                        <strong>
+                            <span id="finalScore">0</span>
+                        </strong>
+                    </p>
+
+                </div>
+
+                <button id="restartButton">
+                    🔄 PLAY AGAIN
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="controls">
+
+            <div class="control-info">
+                <span>⬅️ A / LEFT</span>
+                <span>RIGHT / D ➡️</span>
+            </div>
+
+            <div class="control-info">
+                <span>W / UP = ROTATE ↶</span>
+                <span>S / DOWN = ROTATE ↷</span>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="game.js"></script>
+
+</body>
+</html>
